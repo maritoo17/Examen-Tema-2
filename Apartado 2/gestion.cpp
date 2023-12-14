@@ -13,3 +13,7 @@ struct Estudiante {
 void agregarMateria(Estudiante *estudiante, string materia) {
     estudiante->materias.push_back(materia);
 }
+
+void eliminarMateria(Estudiante& estudiante, const string& materia) {
+    estudiante.materias.erase(remove(estudiante.materias.begin(), estudiante.materias.end(), materia), estudiante.materias.end());
+}

@@ -11,3 +11,10 @@ struct Asistencia{
     EstadoAsistencia estado;
 };
 
+struct Estudiante{
+    string nombre;
+    int edad;
+    float promedio;
+    vector<Asistencia> asistencias;
+};
+

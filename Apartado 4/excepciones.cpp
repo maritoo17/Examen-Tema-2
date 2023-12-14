@@ -8,3 +8,15 @@ struct ExcepcionAsistencia : public exception {
         return "Error: Problema con la asistencia.";
     }
 };
+
+struct ExcepcionRegistro : public exception {
+private:
+    string mensaje;
+
+public:
+    ExcepcionRegistro(const string& msg) : mensaje(msg) {}
+
+    const char* what() const throw() override {
+        return mensaje.c_str();
+    }
+};

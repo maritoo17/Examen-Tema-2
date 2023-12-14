@@ -25,3 +25,25 @@ void registrarAsistencia(struct Estudiante *estudiante, const char *fecha, const
     estudiante->asistencias[estudiante->cantidadAsistencias] = nuevaAsistencia;
     estudiante->cantidadAsistencias++;
 }
+
+void mostrarEstudiante(struct Estudiante estudiante) {
+    printf("Nombre: %s\n", estudiante.nombre);
+    printf("Edad: %d\n", estudiante.edad);
+    printf("Promedio: %.2f\n", estudiante.promedio);
+    printf("Asistencias:\n");
+    for (int i = 0; i < estudiante.cantidadAsistencias; i++) {
+        printf("Fecha: %s, Materia: %s, Estado: ", estudiante.asistencias[i].fecha, estudiante.asistencias[i].materia);
+        switch (estudiante.asistencias[i].estado) {
+            case ASISTIO:
+                printf("Asistió");
+                break;
+            case FALTA:
+                printf("Falta");
+                break;
+            case RETRASO:
+                printf("Tardanza");
+                break;
+        }
+        printf("\n");
+    }
+}

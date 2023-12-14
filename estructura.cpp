@@ -8,7 +8,7 @@ struct Estudiante {
     float promedio;
 };
 
-mostrarEstudiante(Estudiante estudiante) {
+void mostrarEstudiante(Estudiante estudiante) {
     cout << "Nombre: " << estudiante.nombre << endl;
     cout << "Edad: " << estudiante.edad << endl;
     cout << "Promedio: " << estudiante.promedio << endl;

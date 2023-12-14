@@ -9,3 +9,10 @@ struct Asistencia {
     EstadoAsistencia estado;
 };
 
+struct Estudiante {
+    char nombre[30];
+    int edad;
+    float promedio;
+    struct Asistencia asistencias[100];
+    int cantidadAsistencias;
+};

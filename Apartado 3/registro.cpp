@@ -3,5 +3,7 @@
 
 using namespace std;
 
+enum EstadoAsistencia {ASISTIO, FALTA, RETRASO};
+
 
 

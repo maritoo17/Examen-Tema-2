@@ -24,3 +24,23 @@ void registrarAsistencia(Estudiante& estudiante, const string& fecha, const stri
     nuevaAsistencia.materia = materia;
     nuevaAsistencia.estado = estado;
     estudiante.asistencias.push_back(nuevaAsistencia);
+}
+
+void mostrarAsistencias(const Estudiante& estudiante) {
+    cout << "Asistencias de " << estudiante.nombre << ":" << endl;
+    for (const auto& asistencia : estudiante.asistencias) {
+        cout << "Fecha: " << asistencia.fecha << ", Materia: " << asistencia.materia << ", Estado: ";
+        switch (asistencia.estado) {
+            case ASISTIO:
+                cout << "Asistió";
+                break;
+            case FALTA:
+                cout << "Falta";
+                break;
+            case RETRASO    :
+                cout << "Tardanza";
+                break;
+        }
+        cout << endl;
+    }
+}

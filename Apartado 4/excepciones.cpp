@@ -20,3 +20,10 @@ public:
         return mensaje.c_str();
     }
 };
+
+void registrarAsistencia(int asistenciasRegistradas) {
+    if (asistenciasRegistradas >= 3) {
+        throw ExcepcionRegistro("No se pueden registrar más asistencias para este estudiante.");
+    }
+    cout << "Asistencia registrada exitosamente." << endl;
+}

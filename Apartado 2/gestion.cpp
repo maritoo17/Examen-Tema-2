@@ -19,8 +19,15 @@ void eliminarMateria(Estudiante& estudiante, const string& materia) {
 }
 
 void mostrarMaterias(const Estudiante& estudiante) {
-    cout << "Materias inscritas por " << estudiante.nombre << ":" << endl;
+    cout << "Materias inscritas por " << estudiante.nombre << " tras la eliminación de materias:" << endl;
     for (const auto& materia : estudiante.materias) {
         cout << "- " << materia << endl;
     }
 }
+
+void mostrarEstudiante(const Estudiante& estudiante) {
+    cout << "Nombre: " << estudiante.nombre << endl;
+    cout << "Edad: " << estudiante.edad << endl;
+    cout << "Promedio: " << estudiante.promedio << endl;
+}
+

@@ -9,3 +9,7 @@ struct Estudiante {
     float promedio;
     vector <string> materias;
 };
+
+void agregarMateria(Estudiante *estudiante, string materia) {
+    estudiante->materias.push_back(materia);
+}

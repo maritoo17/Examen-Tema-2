@@ -16,3 +16,12 @@ struct Estudiante {
     struct Asistencia asistencias[100];
     int cantidadAsistencias;
 };
+
+void registrarAsistencia(struct Estudiante *estudiante, const char *fecha, const char *materia, EstadoAsistencia estado) {
+    struct Asistencia nuevaAsistencia;
+    strcpy(nuevaAsistencia.fecha, fecha);
+    strcpy(nuevaAsistencia.materia, materia);
+    nuevaAsistencia.estado = estado;
+    estudiante->asistencias[estudiante->cantidadAsistencias] = nuevaAsistencia;
+    estudiante->cantidadAsistencias++;
+}

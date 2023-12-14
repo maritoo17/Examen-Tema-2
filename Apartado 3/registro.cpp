@@ -44,3 +44,18 @@ void mostrarAsistencias(const Estudiante& estudiante) {
         cout << endl;
     }
 }
+
+int main() {
+    Estudiante estudiante1;
+    estudiante1.nombre = "Juan";
+    estudiante1.edad = 20;
+    estudiante1.promedio = 9.5;
+
+    registrarAsistencia(estudiante1, "2023-12-14", "Matemáticas", ASISTIO);
+    registrarAsistencia(estudiante1, "2023-12-15", "Física", FALTA);
+    registrarAsistencia(estudiante1, "2023-12-16", "Química", RETRASO);
+
+    mostrarAsistencias(estudiante1);
+
+    return 0;
+}

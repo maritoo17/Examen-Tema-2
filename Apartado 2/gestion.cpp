@@ -17,3 +17,10 @@ void agregarMateria(Estudiante *estudiante, string materia) {
 void eliminarMateria(Estudiante& estudiante, const string& materia) {
     estudiante.materias.erase(remove(estudiante.materias.begin(), estudiante.materias.end(), materia), estudiante.materias.end());
 }
+
+void mostrarMaterias(const Estudiante& estudiante) {
+    cout << "Materias inscritas por " << estudiante.nombre << ":" << endl;
+    for (const auto& materia : estudiante.materias) {
+        cout << "- " << materia << endl;
+    }
+}

@@ -7,3 +7,7 @@ struct Estudiante {
     float promedio;
     char materia[30];
 };
+
+void agregarMateria(struct Estudiante *estudiante, const char *materia) {
+    strcpy(estudiante->materia, materia);
+}

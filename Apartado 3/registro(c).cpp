@@ -47,3 +47,18 @@ void mostrarEstudiante(struct Estudiante estudiante) {
         printf("\n");
     }
 }
+
+int main() {
+    struct Estudiante estudiante1;
+    strcpy(estudiante1.nombre, "Juan");
+    estudiante1.edad = 20;
+    estudiante1.promedio = 9.5;
+    estudiante1.cantidadAsistencias = 0;
+
+    registrarAsistencia(&estudiante1, "2023-12-14", "Matemáticas", ASISTIO);
+    registrarAsistencia(&estudiante1, "2023-12-15", "Matemáticas", FALTA);
+    registrarAsistencia(&estudiante1, "2023-12-16", "Matemáticas", RETRASO);
+    mostrarEstudiante(estudiante1);
+
+    return 0;
+}

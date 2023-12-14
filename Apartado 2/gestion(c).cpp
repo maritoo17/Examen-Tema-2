@@ -26,3 +26,20 @@ void mostrarEstudiante(struct Estudiante estudiante) {
     printf("Promedio: %.2f\n", estudiante.promedio);
     mostrarMateria(estudiante);
 }
+
+int main () {
+    struct Estudiante estudiante1;
+    strcpy(estudiante1.nombre,"Juan");
+    estudiante1.edad = 20;
+    estudiante1.promedio = 9.5;
+
+    agregarMateria(&estudiante1, "Matematicas");
+    agregarMateria(&estudiante1, "Fisica");
+    agregarMateria(&estudiante1, "Quimica");
+    mostrarEstudiante(estudiante1);
+
+    eliminarMateria( &estudiante1);
+
+
+    return 0;
+}

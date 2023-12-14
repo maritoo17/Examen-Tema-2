@@ -18,3 +18,9 @@ struct Estudiante{
     vector<Asistencia> asistencias;
 };
 
+void registrarAsistencia(Estudiante& estudiante, const string& fecha, const string& materia, EstadoAsistencia estado) {
+    Asistencia nuevaAsistencia;
+    nuevaAsistencia.fecha = fecha;
+    nuevaAsistencia.materia = materia;
+    nuevaAsistencia.estado = estado;
+    estudiante.asistencias.push_back(nuevaAsistencia);

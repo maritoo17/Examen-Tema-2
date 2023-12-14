@@ -11,3 +11,7 @@ struct Estudiante {
 void agregarMateria(struct Estudiante *estudiante, const char *materia) {
     strcpy(estudiante->materia, materia);
 }
+
+void eliminarMateria(struct Estudiante *estudiante) {
+    strcpy(estudiante->materia, "");
+}

@@ -27,3 +27,16 @@ void registrarAsistencia(int asistenciasRegistradas) {
     }
     cout << "Asistencia registrada exitosamente." << endl;
 }
+
+int main() {
+    try {
+        int asistenciasRegistradas = 3;
+        registrarAsistencia(asistenciasRegistradas);
+    } catch (ExcepcionRegistro& e) {
+        cout << "Excepción atrapada: " << e.what() << endl;
+    } catch (exception& e) {
+        cout << "Otra excepción atrapada: " << e.what() << endl;
+    }
+
+    return 0;
+}
